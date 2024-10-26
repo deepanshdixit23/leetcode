@@ -1,9 +1,16 @@
 
-n = 18
 
-let sum = 0;
+arr = []
 
+arr.push(23);
 
+arr.push(34);
 
+console.log(arr.length);
 
-console.log(n + " " + sum);
+arr.pop()
+
+arr.pop()
+
+console.log(arr.length);
+
