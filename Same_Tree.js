@@ -7,13 +7,13 @@
  * }
  */
 /**
- * @param {TreeNode} root
- * @return {number}
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {boolean}
  */
-var maxDepth = function (root) {
-  if (root == null) return 0;
-  let lh = maxDepth(root.left);
-  let rh = maxDepth(root.right);
-
-  return 1 + Math.max(lh, rh);
+var isSameTree = function (p, q) {
+  if (p == null || q == null) return p == q;
+  return (
+    p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+  );
 };
